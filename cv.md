@@ -17,3 +17,8 @@ const showEvenNumber = function(num){
 }
 
 ```
+* ### I have never worked in IT. 
+
+* ### I have a higher humanitarian education. Available knowledge was obtained from online lessons from different sources
+
+* ### I have basic level English language
