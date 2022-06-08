@@ -1,8 +1,6 @@
 const fixBlockHead = document.createElement('header');
 const body = document.querySelector('.body');
 
-const main = document.querySelector('.main-container');
-
 fixBlockHead.className = 'header';
 body.prepend(fixBlockHead);
 
@@ -14,38 +12,54 @@ fixBlockHead.prepend(containerNamePage);
 containerNamePage.prepend(namePage);
 namePage.innerHTML = `Junior Front-end develoter`;
 
-const button = document.querySelectorAll('.nav-list_button');
+const buttons = document.querySelectorAll('.nav-list_button');
+const content = document.querySelectorAll('.content');
 
+function closeContent(){
+    content.forEach(elem =>{
+        elem.classList.add('close');
+    })
+}
 
-// function showAboutMe(){
-//     console.log('Yes');
-// }
-// const content = document.querySelector('.right-block__container');
-// const aboutMe = document.createElement('div');
-// aboutMe.innerHTML = `I am some man who was born in Belarus`;
+function removeActiveButton(){
+    buttons.forEach(but =>{
+        but.classList.remove('active');
+    })
+}
 
+buttons.forEach(but =>{
+  but.addEventListener('click', (event) =>{
+    if(event.target === buttons[0]){
+      closeContent();
+      removeActiveButton()
+      event.target.classList.add('active');
+      content[0].classList.remove('close');
 
-// button.forEach(itemBut => {
-//   itemBut.addEventListener('click', (event)=>{
-//     if(event.target.classList.contains('one')){
-//        content.append(aboutMe);
-//     } else if(event.target.classList.contains('two')){
-//         content.remove(aboutMe);  
-//     } else if(event.target.classList.contains('tree')){
-//         console.log('Third button');    
-//     } else if(event.target.classList.contains('four')){
-//         console.log('Sond button');    
-//     } else if(event.target.classList.contains('five')){
-//         console.log('S button');    
-//     } else if(event.target.classList.contains('six')){
-//         console.log('d button');    
-//     }
-    
-//   })
-// })
-
-const me = {
-    name: 'Nikita',
-    age: 25,
-  }
-  console.log(me);
+    } else if(event.target === buttons[1]){
+      closeContent();
+      removeActiveButton()
+      event.target.classList.add('active');
+      content[1].classList.toggle('close');
+    } else if(event.target === buttons[2]){
+        closeContent();
+        removeActiveButton()
+        event.target.classList.add('active');
+        content[2].classList.toggle('close');
+    } else if(event.target === buttons[3]){
+        closeContent();
+        removeActiveButton()
+        event.target.classList.add('active');
+        content[3].classList.toggle('close');
+    } else if(event.target === buttons[4]){
+        closeContent();
+        removeActiveButton()
+        event.target.classList.add('active');
+        content[4].classList.toggle('close');
+    } else if(event.target === buttons[5]){
+        closeContent();
+        removeActiveButton()
+        event.target.classList.add('active');
+        content[5].classList.toggle('close');
+    }
+  })
+})
