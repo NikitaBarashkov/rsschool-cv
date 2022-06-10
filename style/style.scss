@@ -39,7 +39,6 @@ html {
 .main__right-block { 
   width: 75%;
   height: 100%;
-  // overflow: hidden;
 }
 
 .header {
@@ -65,6 +64,7 @@ html {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     margin: 0 0.5em;
+    width: 80%;
   }
 }
  
@@ -87,14 +87,11 @@ html {
   margin: 5% auto;
   
   ul {
-    
-
     .nav-list {
       list-style-type: none;
       margin-bottom: 20px;
     }
   }
-  
 }
 
 .nav-list_button {
@@ -105,7 +102,6 @@ html {
   background: transparent;
   border: none;
   cursor: pointer;
-  
 }
 
 .nav-list_button:hover {
@@ -120,8 +116,6 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  
 }
 
 .content {
@@ -147,13 +141,13 @@ html {
   ul {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-around;
     row-gap: 20px;
   }
   
-  ol {
+  li {
     width: 50%;
     text-align: center;
+    list-style-type: none;
   }
 
   img {
@@ -163,7 +157,7 @@ html {
   
 }
 
-.contacts ol{
+.contacts li{
   width: 100%;
 }
 
@@ -205,8 +199,6 @@ html {
 
   p  {
     font-size: 2em;
-    // display: inline;
-    // vertical-align: middle;
     margin-top: 2.5%;
   }
 
